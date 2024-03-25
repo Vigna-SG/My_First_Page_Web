@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Caracteres mais usado-->
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <!-- Conf. para utilizar a versão mais recente para o Google Edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Escala 1.0 baseado no dispositivo que está abrindo a página -->
+    <link rel="stylesheet" href="./styles/style.css" >
+    <!-- rel = relação / stylesheet = folha de estilo  -->
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="cabecalho"> <!-- tag semantica (descrever)= cabecalho -->
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html"> Home </a>
+            <a class="cabecalho__menu__link" href="about.html"> Sobre Mim </a>
+        </nav>
+    </header>
+    <main class="apresentacao"> <!-- tag semantica (descrever)= Conteudo -->
+        <section class="apresentacao__conteudo">
+            <h1 class= "apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
+            <!-- strong = destacar uma parte do texto, fechar ele antes do </h1> -->
+            <!-- A class é utilizada para estilizar somente este texto no CSS -->
+            <p class="apresentacao__conteudo__paragrafo">Olá! Sou Gabriel Vigna, estudante de Front-end no Alura Oracle Next Education. Estou colocando em pratica meus conhecimentos e desejo ajudar pequenos negócios e designers a colocarem em prática suas boas ideias.</p>
+            <!-- obs: utilizar alt + z para quebrar a linha do texto-->
+            <div class="apresentacao__conteudo__links">
+                <h2 class="apresentacao__conteudo__links__subtitulo"> Acesse Minhas Redes: </h2>
+                <a class="apresentacao__conteudo__links__botao" href="https://github.com/Vigna-SG">
+                    <img src="./assets/github.png" alt="logo github">
+                    GitHub</a>
+                <a class="apresentacao__conteudo__links__botao" href="https://www.linkedin.com/in/gabriel-vigna-57375a203/">
+                    <img src="./assets/linkedin.png" alt="logo linkedin">
+                    Linkedin</a>
+                <a class="apresentacao__conteudo__links__botao" href="https://www.instagram.com/vigna_sg">
+                    <img src="./assets/instagram.png" alt="logo instagram">
+                    Instagram</a>
+            </div>
+            <!-- <a> = Ancora -> Direciona para outra página atráves de um link  -->
+            <!-- href = hiper link -> inserir link destino -->
+        </section>
+        <img class="imagem" src="./assets/profile.jpeg" alt="Minha Foto">
+    </main>
+    <footer class="rodape"> <!-- tag semantica (descrever)= Rodape -->
+        Desenvolvido por Gabriel Vigna 
+    </footer>
+</body>
+</html>

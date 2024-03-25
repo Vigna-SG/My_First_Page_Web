@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+/* fonte importado no google fonts */
+
+:root {
+    --cor-primaria: #0A2647; /* Background (Azul escuro) */
+    --cor-secundaria: #ffffff; /* Texto (Branco) */
+    --cor-terciaria: #22D4FD; /* Cor destaque (Azul Claro) */
+    --cor-hover: #012030;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat" sans-serif;
+    
+/* root é um pseudo classe, utilizado para estilizar uma parte especifica  */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* *= selecionar todos elementos // margin e padding =0 é para formatar o layout da página*/
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+/* 100vh = 100% viewport (janela de visualização) */
+/* box-sizing: border-box = ele ocupa 100% da largura do body com uma margem e garante que nenhum elemento saira do espaço do body */
+
+.cabecalho{
+    padding: 2% 0% 0% 8%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho__menu__link{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    /* margin: 10% 15%; */
+    padding: 8%;
+    padding-top: 5%;
+    gap: 82px;
+}
+/* display: flex = layout de posicionamento dos itens filhos em relação aos pai */
+/* align-items: center = alinhar os itens entre si no centro */
+/* align-items: last baseline = alinha todos os itens filho na linha de base  */
+/* justify-content: space-between = justificar a distante de um elemento filho do outro */
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+/* flex-direction: column = layout em colunas*/
+/* gap = espaçamento entre elementos filho */
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}   
+/* font-size = tamanho da fonte */
+/* font-family = fonte da letra */
+
+.apresentacao__conteudo__paragrado{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+    
+}
+/* flex-direction: column = ele alinha os itens em coluna 
+   align-items: center = colocar os itens no centro (neste caso verticalmente) */
+
+.apresentacao__conteudo__links__subtitulo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__links__botao{
+    /* background-color: #22D4FD; */
+    /* control + k + c = comentar linha */
+
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border: 2px solid var(--cor-terciaria) ;   
+    border-radius: 8px; 
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    padding: 16px;
+    gap: 16px;
+}
+/* padding = ditancia do conteudo para a borda (margen) */
+
+.apresentacao__conteudo__links__botao:hover{
+    background-color: var(--cor-hover);
+}
+/* hover = cria uma animação de seleção quando coloca a cursor em cima de algum elemento */
+
+
+.imagem{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+
+}
+/* object-fit: cover = ele corta a imagem ajustando para o tamanho definido sem perde qualidade */
+
+.rodape{
+    padding: 15px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 600px ){
+/* @media (max-width: 600px ) = ele altera o layout quando o width for menor de 600px
+    na formatação que estiver dentro desta função */
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 50px;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    .imagem{
+        height: 80%;
+        width: 80%;
+        object-fit: cover;
+        margin: auto;
+    }
+}
+
+
+
+/* anotações:
+ 1 rem = 16px
+
+*/
